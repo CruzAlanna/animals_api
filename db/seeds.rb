@@ -1,9 +1,14 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Animal.create!(name: "Dog", sound: "Bark")
+Animal.create!(name: "Cat", sound: "Meow")
+Animal.create!(name: "Cow", sound: "Moo")
+Animal.create!(name: "Pig", sound: "Oink")
+Animal.create!(name: "Rooster", sound: "Cock A Doodle Doo")
+
+
+#Reseting data
+# rails db:drop  // deletes previous database 
+# rails db:create
+# rails db:migrate
+# rails db:seed  // this inputs the data in this (seeds.rb) file
+
+# rails db: reset /// does all of the commands above!!!
